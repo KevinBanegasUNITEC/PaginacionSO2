@@ -230,13 +230,6 @@ public class MemoryManager {
                     throw new IllegalStateException("OPT pages size exceeded frame count");
                 }
             }
-
-            // Print progress every 1000 references
-            if (i % Math.max(1, memoryLoader.getReferenceCount() / 10) == 0) {
-                double percentage = (double) i / memoryLoader.getReferenceCount() * 100;
-                System.out.printf("Preprocessing: %.1f%% (%d/%d references)%n",
-                        percentage, i, memoryLoader.getReferenceCount());
-            }
         }
     }
 

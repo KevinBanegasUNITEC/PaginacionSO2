@@ -5,8 +5,6 @@ public class Main {
             return;
         }
         MemoryManager memoryManager = new MemoryManager(args[0], Integer.parseInt(args[1]), args[2]);
-        //System.out.println("Memory Manager initialized with strategy: " + memoryManager.getMemoryLoader().getReferenceCount());
         memoryManager.run();
-        //(new TraceGenerator()).generateTrace(args[0], Integer.parseInt(args[1]), Integer.parseInt(args[2]));
     }
 }
